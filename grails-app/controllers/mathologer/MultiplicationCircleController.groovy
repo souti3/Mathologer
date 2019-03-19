@@ -7,15 +7,9 @@ class MultiplicationCircleController {
     static int cy = radius
 
     def index(MultiplicationCircleModel circleModel) {
-        circleModel.lines = []
-        for (int i = 0; i < circleModel.segmentCount; i++) {
-            circleModel.lines.add(new Line(
-                    x1: xValueOf(i, circleModel.segmentCount),
-                    y1: yValueOf(i, circleModel.segmentCount),
-                    x2: xValueOf(i * 2, circleModel.segmentCount), // TODO: Change according to the tableBase
-                    y2: yValueOf(i * 2, circleModel.segmentCount)  // TODO: Change according to the tableBase
-            ))
-        }
+
+        // TODO: Compute the model, the data you need on client side to be displayed. To simplify, start with table base 2.
+
         render view: "show", model: [circleInstance: circleModel]
     }
 
@@ -33,13 +27,10 @@ class MultiplicationCircleController {
 }
 
 class MultiplicationCircleModel {
+
+    List lines = []
     int segmentCount = 10
 
     // TODO: Add a property tableBase such that we can modify and refer to it
 
-    List<Line> lines = Collections.EMPTY_LIST
-}
-
-class Line {
-    double x1, y1, x2, y2
 }
