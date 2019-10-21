@@ -13,8 +13,8 @@ class MultiplicationCircleController {
         for (int i = 0; i < circleModel.segmentCount; i++){
             double x1 = xValueOf(i, circleModel.segmentCount)
             double y1 = yValueOf(i, circleModel.segmentCount)
-            double x2 = xValueOf(i * 2, circleModel.segmentCount)
-            double y2 = yValueOf(i * 2, circleModel.segmentCount)
+            double x2 = xValueOf(i * circleModel.tableCount, circleModel.segmentCount)
+            double y2 = yValueOf(i * circleModel.tableCount, circleModel.segmentCount)
             def line = new Line(x1: x1, y1: y1, x2: x2, y2: y2)
             circleModel.lines.add(line)
         }
@@ -42,6 +42,8 @@ class MultiplicationCircleModel {
 
     // TODO: Add a property tableBase such that we can modify and refer to it
     int tableCount = 2
+
+
 
 }
 
