@@ -39,6 +39,12 @@
         <input type="number" name="segmentCount" id="segmentCount" value="${circleInstance.segmentCount}">
         <input type="submit" value="down" onclick="decrease('segmentCount')" id="segmentCountDown">
     </div>
+    <div>
+        <label for="tableCount">Table base:</label>
+        <input type="submit" value=" up " onclick="increase('tableCount')" id="tableCountUp">
+        <input type="number" name="tableCount" id="tableCount" value="${circleInstance.tableCount}">
+        <input type="submit" value="down" onclick="decrease('tableCount')" id="tableCountDown">
+    </div>
 
     <!-- TODO: Add an input for the table base -->
 

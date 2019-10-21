@@ -41,6 +41,7 @@ class MultiplicationCircleModel {
     int segmentCount = 10
 
     // TODO: Add a property tableBase such that we can modify and refer to it
+    int tableCount = 2
 
 }
 
